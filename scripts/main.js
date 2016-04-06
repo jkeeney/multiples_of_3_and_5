@@ -28,3 +28,30 @@ var multiples_of_3_and_5 = function() {
 	return;
 }
 
+var even_fibonacci_sum = function () {
+	
+	var topBoundary = document.getElementById("fibLimit").value;
+	var fibSeq = [1, 1];
+	var result = 0;
+	
+	//populate an array that contains the Fibonacci sequence up to the topBoundary
+	while(fibSeq[fibSeq.length-1] < topBoundary){
+		fibSeq.push(fibSeq[fibSeq.length-2] + fibSeq[fibSeq.length-1]);
+	}
+	
+	var numFib = fibSeq.length-1;
+	
+	for (i = 0; i < numFib; i++){
+		
+		if (fibSeq[i]%2 === 0){
+			result += fibSeq[i];
+		}
+		
+	}
+	
+	document.getElementById("numOfValues").innerHTML = numFib;
+	document.getElementById("fibSetLimit").innerHTML = topBoundary;
+	document.getElementById("evenSum").innerHTML = result;
+	
+	return;
+}

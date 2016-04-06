@@ -35,7 +35,7 @@ a:hover{
 	margin-top: 40px;
 }
 
-#maincontent{
+.maincontent{
 	display: block;
 	background-color: #ebf0fc;
 	margin-left: 120px;
