@@ -20,8 +20,7 @@
 			<p>Set the upper limit.  The script will calculate the sum of all multiples of 3 or 5 below the upper limit you set.</p>
 			<input onchange="multiples_of_3_and_5();" type="text" id="usrLimit" value="1000" />
 			<input onclick="multiples_of_3_and_5();" class="buttons" type="submit" name="submitbutton" value="Submit" />
-			<p>There are <span id="numOfMultiples"></span> multiples of 3 or 5 below <span id="limit"></span>.</p>
-			<p>The sum of these multiples is: <span id="multipleSum"></span></p>
+			<p><span id="result1"></span></p>
 		</div>
 	</div>
 	
@@ -39,12 +38,27 @@
 			<p>Set the upper limit.  The script will calculate the sum of all even Fibonacci numbers below the upper limit you set.</p>
 			<input onchange="even_fibonacci_sum();" type="text" id="fibLimit" value="4000000" />
 			<input onclick="even_fibonacci_sum();" class="buttons" type="submit" name="submitbutton2" value="Submit" />
-			<p>There are <span id="numOfValues"></span> values in the Fibonacci sequence below <span id="fibSetLimit"></span>.</p>
-			<p>The sum of the even values in the sequence is: <span id="evenSum"></span></p>
+			<p><span id="result2"></span></p>
 		</div>
 	</div>
 	
 	<div class="cf"></div>
+	
+	<div class="maincontent">
+		<div class="problem">
+			<a href="https://projecteuler.net/problem=3"><h3>Problem 3: Largest Prime Factor</h3></a>
+			<p>The prime factors of 13195 are 5, 7, 13 and 29.</p>
+			<p>What is the largest prime factor of the number 600851475143 ?</p>
+		</div>
+		<div class="solution">
+			<h3>Solution</h3>
+			<p>Find the largest prime factor for this number:</p>
+			<input onchange="largest_prime_factor();" type="text" id="number" value="11477040" />
+			<input onclick="largest_prime_factor();" class="buttons" type="submit" name="submitbutton3" value="Submit" />
+			<p><span id="result3"></span></p>
+		</div>
+	</div>
+	
 	<div class="cf"></div>
 	
 	<script src="scripts/main.js" type="text/javascript"></script>

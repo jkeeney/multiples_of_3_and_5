@@ -21,9 +21,7 @@ var multiples_of_3_and_5 = function() {
 		result += mulList[i];
 	}
 	
-	document.getElementById("numOfMultiples").innerHTML = numMul;
-	document.getElementById("limit").innerHTML = topBoundary;
-	document.getElementById("multipleSum").innerText = result;
+	document.getElementById("result1").innerHTML = "The sum of all multiples of 3 or 5 below " + topBoundary + " is: " + result;
 	
 	return;
 }
@@ -49,9 +47,67 @@ var even_fibonacci_sum = function () {
 		
 	}
 	
-	document.getElementById("numOfValues").innerHTML = numFib;
-	document.getElementById("fibSetLimit").innerHTML = topBoundary;
-	document.getElementById("evenSum").innerHTML = result;
+	document.getElementById("result2").innerHTML = "The sum of all even Fibonacci numbers below " + topBoundary + " is: " + result;
 	
 	return;
 }
+
+var nextPrime = function (value){
+	if (value > 2) {
+        var i, q;
+        do {
+            i = 3;
+            value += 2;
+            q = Math.floor(Math.sqrt(value));
+            while (i <= q && value % i) {
+                i += 2;
+            }
+        } while (i <= q);
+        return value;
+    }
+    return value === 2 ? 3 : 2;
+}
+
+var find_primes = function (limit) {
+	
+	var value = 0, result = [];
+	
+	value = nextPrime(value);
+	result.push(value);
+	
+	for (var i = 0; result[i] < limit; i++) {
+		value = nextPrime(value);
+		result.push(value);
+	}
+	
+	result.splice(result.length-1,1);
+	
+	return result;
+}
+
+var largest_prime_factor = function () {
+	
+	var number = document.getElementById("number").value;
+	
+	//create an array that will hold all primes below half the value of number
+	var primes_array = find_primes(Math.floor(number/2));
+	
+	//create and populate an array of all primes that are factors of number
+	var prime_factors = [];
+	for (i = 0; i < primes_array.length; i++){
+		if (number % primes_array[i] === 0){
+			prime_factors.push(primes_array[i]);
+		}
+	}
+	
+	document.getElementById("result3").innerHTML = "The prime factors of " + number + " are: " + prime_factors;
+	
+	return;
+}
+
+
+
+
+
+
+
