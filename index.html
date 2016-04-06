@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Euler Solutions</title>
+	<link rel="stylesheet" href="styles/stylesheet.css" type="text/css" />
+	
+</head>
+
+<body>
+	<div id="pagetitle">Jason Keeney's Solutions <br>to Project Euler Problems</div>
+	<div class="cf"></div>
+	<div id="maincontent">
+		<div class="problem">
+			<a href="https://projecteuler.net/problem=1"><h3>Problem 1: Multiples of 3 and 5</h3></a>
+			<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p> 
+			<p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
+		</div>
+		<div class="solution">
+			<h3>Solution</h3>
+			<p>Set the upper limit.  The script will calculate the sum of all multiples of 3 or 5 below the upper limit you set.</p>
+			<input onchange="multiples_of_3_and_5();" type="text" id="usrLimit" value="1000" />
+			<input onclick="multiples_of_3_and_5();" class="buttons" type="submit" name="submitbutton" value="Submit" />
+			<p>There are <span id="numOfMultiples"></span> multiples of 3 or 5 below <span id="limit"></span>.</p>
+			<p>The sum of these multiples is: <span id="multipleSum"></span></p>
+		</div>
+	</div>
+	
+	<script src="scripts/main.js" type="text/javascript"></script>
+</body>
+
+</html>
